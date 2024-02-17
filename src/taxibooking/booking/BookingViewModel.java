@@ -9,7 +9,6 @@ import java.util.List;
 
 import taxibooking.model.Booking;
 import taxibooking.model.Taxi;
-import taxibooking.model.TaxiStatus;
 import taxibooking.repository.Repository;
 
 public class BookingViewModel {
@@ -55,64 +54,11 @@ public class BookingViewModel {
 					+ Math.abs((int) tempList.get(i).getCurrentStopPoint() - (int) fromPoint) <= fromTime) {
 				booking.setTaxiId(tempList.get(i).getTaxiNo());
 				Repository.getInstance().book(booking);
-				bookingView.OnSuccess("Taxi canbe alloted.\nTaxi-"+booking.getTaxiId()+"is allocated...");
+				bookingView.OnSuccess("Taxi canbe alloted.\nTaxi-" + booking.getTaxiId() + "is allocated...");
 				return;
 			}
 		}
 		bookingView.OnFailure();
-
 	}
-
-//	private boolean checkTaxiAvailability(char fromPoint, int fromTime) {
-//		HashMap<Character, ArrayList<TaxiStatus>> PickupPoints = Repository.getInstance().getPickupPoints();
-//		ArrayList<TaxiStatus> leftSidePoints, rightSidePoints;
-//		for (int i = 0; i < PickupPoints.size(); i++) {
-//			if (i == 0) {
-//				leftSidePoints = PickupPoints.get(fromPoint);
-//				if (leftSidePoints != null) {
-//					int index = getTaxiIndex(leftSidePoints, fromTime);
-//				}
-//			} else {
-//				int leftIndex = -1, rightIndex = -1;
-//				leftSidePoints = PickupPoints.get((char) (fromPoint + i));
-//				rightSidePoints = PickupPoints.get((char) (fromPoint + i));
-//				if (leftSidePoints != null && rightSidePoints != null) {
-//					leftIndex = getTaxiIndex(leftSidePoints, fromTime);
-//					rightIndex = getTaxiIndex(rightSidePoints, fromTime);
-//					if (leftIndex != -1 && rightIndex != -1) {
-//						TaxiStatus selectedTaxi;
-//						if (Repository.getInstance().getTaxies().get(leftSidePoints.get(leftIndex).getTaxiId())
-//								.getTotalEarnings() > Repository.getInstance().getTaxies()
-//										.get(rightSidePoints.get(rightIndex).getTaxiId()).getTotalEarnings()) {
-//							selectedTaxi = leftSidePoints.get(leftIndex);
-//							changePickingTaxiStatus()
-//						} else {
-//							selectedTaxi = rightSidePoints.get(rightIndex);
-//						}
-//					}
-//				}
-//			}
-//		}
-//		return false;
-//	}
-//
-//	private int getTaxiIndex(ArrayList<TaxiStatus> pickUpPoints, int fromTime) {
-//		if (pickUpPoints != null) {
-//			Collections.sort(pickUpPoints, new Comparator<TaxiStatus>() {
-//
-//				@Override
-//				public int compare(TaxiStatus o1, TaxiStatus o2) {
-//					return (int) (Repository.getInstance().getTaxies().get(o1.getTaxiId()).getTotalEarnings()
-//							- Repository.getInstance().getTaxies().get(o2.getTaxiId()).getTotalEarnings());
-//				}
-//			});
-//		}
-//		for (int i = 0; i < pickUpPoints.size(); i++) {
-//			if (fromTime >= pickUpPoints.get(i).getFreeTime()) {
-//				return i;
-//			}
-//		}
-//		return -1;
-//	}
 
 }
