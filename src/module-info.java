@@ -6,4 +6,5 @@
  *
  */
 module taxibooking {
+	requires java.sql;
 }

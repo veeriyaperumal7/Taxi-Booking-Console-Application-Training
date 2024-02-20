@@ -1,21 +1,25 @@
 package taxibooking.model;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class Taxi {
 
 	private int taxiNo;
+	private int userId;
 	private float totalEarnings;
-	private ArrayList<Integer> bookingHistory;
 	private char currentStopPoint;
-	private int availableTime;
+	private  LocalTime  availableTime;
 
 	public Taxi(int taxiNo) {
 		this.taxiNo = taxiNo;
 		this.totalEarnings = 0.0f;
-		this.bookingHistory = new ArrayList<>();
-		this.availableTime = 0;
+		this.availableTime = LocalTime.of(1,0);
 		this.currentStopPoint = 'A';
+	}
+
+	public Taxi() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getTaxiNo() {
@@ -34,14 +38,6 @@ public class Taxi {
 		this.totalEarnings = totalEarnings;
 	}
 
-	public ArrayList<Integer> getBookingHistory() {
-		return bookingHistory;
-	}
-
-	public void setBookingHistory(ArrayList<Integer> bookingHistory) {
-		this.bookingHistory = bookingHistory;
-	}
-
 	public char getCurrentStopPoint() {
 		return currentStopPoint;
 	}
@@ -50,12 +46,20 @@ public class Taxi {
 		this.currentStopPoint = currentStopPoint;
 	}
 
-	public int getAvailableTime() {
+	public LocalTime getAvailableTime() {
 		return availableTime;
 	}
 
-	public void setAvailableTime(int availableTime) {
+	public void setAvailableTime(LocalTime availableTime) {
 		this.availableTime = availableTime;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 }

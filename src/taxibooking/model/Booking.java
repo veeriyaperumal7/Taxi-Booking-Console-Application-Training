@@ -1,11 +1,14 @@
 package taxibooking.model;
 
+import java.time.LocalTime;
+
 public class Booking {
-	private int bookingId, customerId, fromTime, toTime, taxiId;
+	private int bookingId, customerId, taxiId;
+	private LocalTime  fromTime, toTime;
 	private char fromPoint, toPoint;
 	private float amount;
 
-	public Booking(int bookingId, int customerId, int fromTime, int toTime, char fromPoint, char toPoint,
+	public Booking(int bookingId, int customerId, LocalTime fromTime, LocalTime toTime, char fromPoint, char toPoint,
 			float amount) {
 		this.bookingId = bookingId;
 		this.customerId = customerId;
@@ -43,19 +46,19 @@ public class Booking {
 		this.customerId = customerId;
 	}
 
-	public int getFromTime() {
+	public LocalTime getFromTime() {
 		return fromTime;
 	}
 
-	public void setFromTime(int fromTime) {
+	public void setFromTime(LocalTime fromTime) {
 		this.fromTime = fromTime;
 	}
 
-	public int getToTime() {
+	public LocalTime getToTime() {
 		return toTime;
 	}
 
-	public void setToTime(int toTime) {
+	public void setToTime(LocalTime toTime) {
 		this.toTime = toTime;
 	}
 
