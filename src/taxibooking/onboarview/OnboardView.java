@@ -58,7 +58,13 @@ public class OnboardView {
 		System.out.print("Enter you User Password : ");
 		newAccount.setPassword(read.nextLine());
 		newAccount.setRole("USER");
-		return onboardViewModel.createNewAccount(newAccount);
+		if (onboardViewModel.createNewAccount(newAccount)) {
+			System.out.println("New account created successfully...");
+			return true;
+		} else {
+			System.out.println("New account not created...");
+			return false;
+		}
 	}
 
 	private boolean login() {
@@ -67,7 +73,13 @@ public class OnboardView {
 		loginAccount.setUserName(read.nextLine());
 		System.out.print("Enter you User Password : ");
 		loginAccount.setPassword(read.nextLine());
-		return onboardViewModel.login(loginAccount);
+		if (onboardViewModel.login(loginAccount)) {
+			System.out.println("Account login successfully...");
+			return true;
+		} else {
+			System.out.println("Account login failure.Check your user id and password...");
+			return false;
+		}
 	}
 
 	private void printFeatures() {
