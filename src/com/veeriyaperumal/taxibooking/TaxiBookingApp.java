@@ -1,4 +1,4 @@
-package taxibooking;
+package com.veeriyaperumal.taxibooking;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -7,11 +7,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-import taxibooking.booking.BookingView;
-import taxibooking.onboarview.OnboardView;
-import taxibooking.report.ReportView;
-import taxibooking.repository.Repository;
-import taxibooking.taxi.TaxiView;
+import com.veeriyaperumal.taxibooking.booking.BookingView;
+import com.veeriyaperumal.taxibooking.onboarview.OnboardView;
+import com.veeriyaperumal.taxibooking.report.ReportView;
+import com.veeriyaperumal.taxibooking.repository.Repository;
+import com.veeriyaperumal.taxibooking.taxi.TaxiView;
 
 public class TaxiBookingApp {
 

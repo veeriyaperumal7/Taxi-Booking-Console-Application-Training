@@ -1,10 +1,10 @@
-package taxibooking.booking;
+package com.veeriyaperumal.taxibooking.booking;
 
 import java.time.LocalTime;
 import java.util.List;
 import java.util.Scanner;
 
-import taxibooking.model.Booking;
+import com.veeriyaperumal.taxibooking.model.Booking;
 
 public class BookingView {
 

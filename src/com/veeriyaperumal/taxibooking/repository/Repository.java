@@ -1,4 +1,4 @@
-package taxibooking.repository;
+package com.veeriyaperumal.taxibooking.repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,10 +9,10 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
-import taxibooking.databaseconnection.JdbcConnection;
-import taxibooking.model.Account;
-import taxibooking.model.Booking;
-import taxibooking.model.Taxi;
+import com.veeriyaperumal.taxibooking.databaseconnection.JdbcConnection;
+import com.veeriyaperumal.taxibooking.model.Account;
+import com.veeriyaperumal.taxibooking.model.Booking;
+import com.veeriyaperumal.taxibooking.model.Taxi;
 
 public class Repository extends JdbcConnection {
 	private static Repository repository;

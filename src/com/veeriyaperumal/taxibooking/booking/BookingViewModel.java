@@ -1,4 +1,4 @@
-package taxibooking.booking;
+package com.veeriyaperumal.taxibooking.booking;
 
 import java.sql.SQLException;
 import java.time.LocalTime;
@@ -9,10 +9,10 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
-import taxibooking.model.Account;
-import taxibooking.model.Booking;
-import taxibooking.model.Taxi;
-import taxibooking.repository.Repository;
+import com.veeriyaperumal.taxibooking.model.Account;
+import com.veeriyaperumal.taxibooking.model.Booking;
+import com.veeriyaperumal.taxibooking.model.Taxi;
+import com.veeriyaperumal.taxibooking.repository.Repository;
 
 public class BookingViewModel {
 

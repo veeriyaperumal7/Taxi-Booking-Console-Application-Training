@@ -1,4 +1,4 @@
-package taxibooking.report;
+package com.veeriyaperumal.taxibooking.report;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -6,9 +6,9 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
-import taxibooking.model.Booking;
-import taxibooking.model.Taxi;
-import taxibooking.repository.Repository;
+import com.veeriyaperumal.taxibooking.model.Booking;
+import com.veeriyaperumal.taxibooking.model.Taxi;
+import com.veeriyaperumal.taxibooking.repository.Repository;
 
 public class ReportViewModel {
 

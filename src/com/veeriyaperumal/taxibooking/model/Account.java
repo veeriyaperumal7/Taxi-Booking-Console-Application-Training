@@ -1,4 +1,4 @@
-package taxibooking.model;
+package com.veeriyaperumal.taxibooking.model;
 
 public class Account {
 	private String userName, role,password;

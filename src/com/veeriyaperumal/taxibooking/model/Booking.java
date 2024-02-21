@@ -1,4 +1,4 @@
-package taxibooking.model;
+package com.veeriyaperumal.taxibooking.model;
 
 import java.time.LocalTime;
 

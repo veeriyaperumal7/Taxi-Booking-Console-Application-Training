@@ -1,8 +1,8 @@
-package taxibooking.taxi;
+package com.veeriyaperumal.taxibooking.taxi;
 
 import java.util.Scanner;
 
-import taxibooking.model.Account;
+import com.veeriyaperumal.taxibooking.model.Account;
 
 public class TaxiView {
 

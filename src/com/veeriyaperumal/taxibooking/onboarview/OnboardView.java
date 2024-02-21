@@ -1,10 +1,10 @@
-package taxibooking.onboarview;
+package com.veeriyaperumal.taxibooking.onboarview;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import taxibooking.model.Account;
+import com.veeriyaperumal.taxibooking.model.Account;
 
 public class OnboardView {
 	private OnboardViewModel onboardViewModel;

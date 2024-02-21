@@ -1,9 +1,9 @@
-package taxibooking.onboarview;
+package com.veeriyaperumal.taxibooking.onboarview;
 
 import java.sql.SQLException;
 
-import taxibooking.model.Account;
-import taxibooking.repository.Repository;
+import com.veeriyaperumal.taxibooking.model.Account;
+import com.veeriyaperumal.taxibooking.repository.Repository;
 
 public class OnboardViewModel {
 

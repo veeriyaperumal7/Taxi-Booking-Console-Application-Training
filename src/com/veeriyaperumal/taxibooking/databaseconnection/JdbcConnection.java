@@ -1,4 +1,4 @@
-package taxibooking.databaseconnection;
+package com.veeriyaperumal.taxibooking.databaseconnection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
